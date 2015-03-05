@@ -1,0 +1,1 @@
+php -S laravel4.2.dev:8082 -t public

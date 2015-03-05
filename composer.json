@@ -1,0 +1,37 @@
+{
+	"name": "laravel/laravel",
+	"description": "The Laravel Framework.",
+	"keywords": ["framework", "laravel"],
+	"license": "MIT",
+	"require": {
+		"laravel/framework": "4.2.*"
+	},
+	"autoload": {
+		"classmap": [
+			"app/commands",
+			"app/controllers",
+			"app/models",
+			"app/database/migrations",
+			"app/database/seeds",
+			"app/tests/TestCase.php"
+		]
+	},
+	"scripts": {
+        "post-install-cmd": [
+            "php D:\\Praditha.H\\Project\\Laravel\\Laravel.4.2\\artisan optimize"
+        ],
+        "pre-update-cmd": [
+            "php D:\\Praditha.H\\Project\\Laravel\\Laravel.4.2\\artisan clear-compiled"
+        ],
+        "post-update-cmd": [
+            "php D:\\Praditha.H\\Project\\Laravel\\Laravel.4.2\\artisan optimize"
+        ],
+        "post-create-project-cmd": [
+            "php D:\\Praditha.H\\Project\\Laravel\\Laravel.4.2\\artisan key:generate"
+        ]
+    },
+	"config": {
+		"preferred-install": "dist"
+	},
+	"minimum-stability": "stable"
+}
