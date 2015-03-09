@@ -1,0 +1,60 @@
+body{
+	margin:20px;
+}
+
+button.opr-btn{
+	width: 80px;
+}
+
+p{
+	word-wrap: break-word;
+}
+
+.avatar-img{
+	max-width: 200px;
+	max-height: 200px;
+	border: 2px solid #ddd;
+}
+
+.avatar-img:hover{
+	cursor: pointer;
+}
+
+.user-avatar-bg-img{
+	-webkit-filter: blur(10px); 
+	filter: blur(10px);
+	height: 300px;
+	border-radius: 20px;
+	border: 2px solid black;
+}
+
+.user-avatar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	padding: 100px 0;
+	width: 100%;
+}
+
+figure.user-avatar-figure figcaption{
+	font-size: 18px;
+	font-weight: bolder;
+	padding-top: 5px;
+	text-transform: uppercase;
+	word-wrap: break-word;
+}
+
+figure.user-avatar-figure figcaption div{
+	border: 1px solid grey;
+	border-radius: 3px;
+	background-color: #E3E3E3;
+	color: grey;
+	width: 20%;
+	margin: 0 auto;
+}
+
+.item-center{
+	float: none;
+	margin: 0 auto;
+}
