@@ -3,10 +3,10 @@
 @section('content')
 <div id="page-wrapper">
 	<div id="user-show" class="row text-center">		
-		<div class="user-avatar-bg-img" style="background: url('/{{ $user->avatar_path }}') no-repeat center center scroll; padding: 100px 0;"></div>
+		<div class="user-avatar-bg-img" style="background: url('@if($user->avatar)/{{ $user->avatar }}@else/images/avatar/default.jpg @endif') no-repeat center center scroll; padding: 100px 0;"></div>
 		<div class="container user-avatar">
 			<figure class="user-avatar-figure text-center">
-				<img src="/{{ $user->avatar_path }}" class="avatar-img img-circle">
+				<img src="@if($user->avatar)/{{ $user->avatar }}@else/images/avatar/default.jpg @endif" class="avatar-img img-circle">
 				<figcaption><div>{{ $user->fullname }}</div></figcaption>
 			</figure>
 		</div>

@@ -34,7 +34,16 @@ class UsersController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$validation = new Services\Validators\User;
+
+		if ($validation->passes()) 
+		{
+			User::create(Input::all());
+
+			return Redirect::route('users.index');
+		}
+		
+		return Redirect::back()->withInput()->withErrors($validation->errors);		
 	}
 
 	/**
@@ -60,7 +69,9 @@ class UsersController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$user = User::find($id);
+		
+		return View::make('users.edit', compact('user'));
 	}
 
 	/**
